@@ -10,6 +10,7 @@ library(bslib)
 #basically CSS for shiny
 library('shiny')
 #makes web applications
+library(leaflet)
 
 # Define UI for my application
 fluidPage(
@@ -29,5 +30,11 @@ fluidPage(
   titlePanel("How do bird migration patterns vary agains temperature change"),
   #(working title - find a catchier title)
 
-    
-)
+  
+  
+leafletOutput("map")
+             
+
+)    
+#closing the fluid page section 
+

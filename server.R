@@ -4,15 +4,16 @@
 
 library('shiny')
 # Define server logic required to draw a histogram
+library('leaflet')
 
 function(input, output) {
-  
-  # You can access the value of the widget with input$file, e.g.
-  output$value <- renderPrint({
-    str(input$file)
-  })
-  
+  output$map <- renderLeaflet({ 
+    leaflet() |> 
+      addTiles()  |> 
+      setView(0.34580993652344, 50.6252978589571, zoom = 3, options=list('maxZoom'=0)) 
+    
+    
+  }) 
 }
-
 
 
