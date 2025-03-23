@@ -151,7 +151,7 @@ ui <- page_sidebar(
                       radioButtons('changeFontSize', label = h3('change font size'),
                                    choices = list('normal' = 1, 'bigger' = 2, 'smaller' = 3),
                                    #Options for the different font size
-                                   selected - 1) # Which button si currently chosen
+                                   selected = 1) # Which button si currently chosen
     ),),
     leafletOutput(outputId = "mymap"),
     actionButton("print", "Print Map")
